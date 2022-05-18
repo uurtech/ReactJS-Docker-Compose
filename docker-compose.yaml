@@ -1,0 +1,11 @@
+services:
+  frontend:
+    build: .
+    ports:
+      - 3000:3000
+    stdin_open: true
+    volumes:
+      - ./app/:/usr/src/app
+      - /usr/src/app/node_modules
+    container_name: frontend
+    restart: always
